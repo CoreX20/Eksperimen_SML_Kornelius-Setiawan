@@ -21,3 +21,10 @@ def preprocess_data(input_path, output_path):
     # Simpan hasil
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     df.to_csv(output_path, index=False)
+
+
+if __name__ == "__main__":
+    preprocess_data(
+        input_path="./Student_Performance_raw.csv",
+        output_path="./preprocessing/Student_Performance_preprocessing.csv",
+    )
